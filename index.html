@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>EduVault Academic Portal - Partido State University</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Crimson+Text:wght@400;600;700&family=Source+Sans+Pro:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <!-- Academic Background Elements -->
+  <div class="academic-elements">
+    <div class="academic-element"><i class="fas fa-graduation-cap"></i></div>
+    <div class="academic-element"><i class="fas fa-university"></i></div>
+    <div class="academic-element"><i class="fas fa-book-open"></i></div>
+    <div class="academic-element"><i class="fas fa-atom"></i></div>
+  </div>
+
+  <!-- University Header -->
+  <header class="university-header">
+    <div class="header-container">
+      <div class="university-branding">
+        <div class="university-seal">
+          <i class="fas fa-university"></i>
+        </div>
+        <div class="university-info">
+          <h1>Partido State University</h1>
+          <p>Academic Portal System</p>
+        </div>
+      </div>
+      <nav class="header-nav">
+        <a href="#" class="nav-link">About</a>
+        <a href="#" class="nav-link">Admissions</a>
+        <a href="#" class="nav-link">Academics</a>
+        <a href="#" class="nav-link">Support</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Main Container -->
+  <main class="main-container">
+    <div class="book-container">
+      <div class="book-wrapper">
+        <!-- Book Cover -->
+        <div class="book-cover" id="bookCover">
+          <div class="cover-content">
+            <div class="cover-seal">
+              <i class="fas fa-scroll"></i>
+            </div>
+            <h1 class="cover-title">EduVault</h1>
+            <p class="cover-subtitle">Academic Knowledge Management System</p>
+            <div class="cover-university">Partido State University</div>
+            <button class="open-book-btn" id="openBookBtn">
+              <i class="fas fa-book-open"></i> Enter Portal
+            </button>
+          </div>
+        </div>
+
+        <!-- Book Pages -->
+        <div class="book-pages" id="bookPages">
+          <div class="book-spine"></div>
+          
+          <!-- Back Button -->
+          <button class="back-button" id="backButton">
+            <i class="fas fa-arrow-left"></i>
+            <span>Back to Cover</span>
+          </button>
+          
+          <!-- Left Page - Welcome -->
+          <div class="left-page slide-in-left">
+            <div class="page-header">
+              <div class="page-number">Page 1</div>
+            </div>
+            <div class="welcome-content">
+              <h2>Welcome to Your Academic Journey</h2>
+              <p>Access comprehensive educational resources, manage your academic progress, and connect with the university community through our integrated learning platform.</p>
+              
+              <ul class="academic-features">
+                <li><i class="fas fa-book-reader"></i> Digital Library Access</li>
+                <li><i class="fas fa-chalkboard-teacher"></i> Interactive Learning Modules</li>
+                <li><i class="fas fa-users"></i> Collaborative Study Groups</li>
+                <li><i class="fas fa-chart-line"></i> Academic Progress Tracking</li>
+                <li><i class="fas fa-certificate"></i> Certification Management</li>
+                <li><i class="fas fa-mobile-alt"></i> Mobile Learning Support</li>
+              </ul>
+              
+              <p><em>"Empowering minds, shaping futures through infinite knowledge and academic excellence."</em></p>
+            </div>
+          </div>
+
+          <!-- Right Page - Login Form -->
+          <div class="right-page slide-in-right">
+            <div class="page-header">
+              <div class="page-number">Page 2</div>
+            </div>
+            
+            <div class="login-form-header">
+              <h2>Academic Portal Access</h2>
+              <p>Please authenticate with your university credentials</p>
+            </div>
+
+            <form id="academicLoginForm" novalidate>
+              <div class="form-group">
+                <label for="universityEmail" class="form-label">University Email</label>
+                <input 
+                  type="email" 
+                  id="universityEmail" 
+                  name="email" 
+                  class="form-input" 
+                  placeholder="student@parsu.edu.ph" 
+                  required 
+                />
+                <div class="error-message" id="emailError">Please enter a valid @parsu.edu.ph email address</div>
+              </div>
+
+              <div class="form-group">
+                <label for="academicPassword" class="form-label">Password</label>
+                <input 
+                  type="password" 
+                  id="academicPassword" 
+                  name="password" 
+                  class="form-input" 
+                  placeholder="Enter your secure password" 
+                  required 
+                />
+                <div class="error-message" id="passwordError">Password is required</div>
+              </div>
+
+              <div class="form-group">
+                <label for="userRole" class="form-label">Academic Role</label>
+                <select id="userRole" name="role" class="form-select" required>
+                  <option value="" disabled selected>Select your role</option>
+                  <option value="student">🎓 Student</option>
+                  <option value="faculty">👨‍🏫 Faculty Member</option>
+                  <option value="administrator">⚙️ Administrator</option>
+                </select>
+                <div class="error-message" id="roleError">Please select your academic role</div>
+              </div>
+
+              <div class="form-options">
+                <label class="remember-checkbox">
+                  <input type="checkbox" id="rememberSession" name="remember" />
+                  <span>Remember this session</span>
+                </label>
+                <a href="#" class="forgot-link">Recovery Options</a>
+              </div>
+
+              <button type="submit" class="login-btn">
+                <i class="fas fa-sign-in-alt"></i> Access Portal
+              </button>
+            </form>
+
+            <div class="divider">
+              <span>Alternative Access</span>
+            </div>
+
+            <div class="alternative-options">
+              <button id="googleAuthBtn" class="alt-btn google-btn">
+                <i class="fab fa-google"></i>
+                <span>Google</span>
+              </button>
+              <button id="newAccountBtn" class="alt-btn register-btn">
+                <i class="fas fa-user-plus"></i>
+                <span>New Account</span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
