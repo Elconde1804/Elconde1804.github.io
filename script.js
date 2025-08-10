@@ -55,7 +55,13 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   });
 
-  backButton.addEventListener('click', closeBook);
+  // Back button event listener - handles closing the book from cover-back section
+  if (backButton) {
+    backButton.addEventListener('click', (e) => {
+      e.preventDefault();
+      closeBook();
+    });
+  }
 
   // Enhanced form validation functions
   function validateEmail() {
