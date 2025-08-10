@@ -44,16 +44,55 @@
       <div class="book-wrapper">
         <!-- Book Cover -->
         <div class="book-cover" id="bookCover">
-          <div class="cover-content">
-            <div class="cover-seal">
-              <i class="fas fa-scroll"></i>
+          <!-- Front Cover -->
+          <div class="cover-front">
+            <div class="cover-content">
+              <div class="cover-seal">
+                <i class="fas fa-scroll"></i>
+              </div>
+              <h1 class="cover-title">EduVault</h1>
+              <p class="cover-subtitle">Academic Knowledge Management System</p>
+              <div class="cover-university">Partido State University</div>
+              <button class="open-book-btn" id="openBookBtn">
+                <i class="fas fa-book-open"></i> Enter Portal
+              </button>
             </div>
-            <h1 class="cover-title">EduVault</h1>
-            <p class="cover-subtitle">Academic Knowledge Management System</p>
-            <div class="cover-university">Partido State University</div>
-            <button class="open-book-btn" id="openBookBtn">
-              <i class="fas fa-book-open"></i> Enter Portal
-            </button>
+          </div>
+          
+          <!-- Back Cover (Inside of front cover) -->
+          <div class="cover-back">
+            <div class="back-cover-content">
+              <div class="back-seal">
+                <i class="fas fa-university"></i>
+              </div>
+              <h2 class="back-title">Welcome to Your Academic Journey</h2>
+              <div class="back-motto">
+                <p>"Empowering minds through knowledge and innovation"</p>
+              </div>
+              <div class="back-features">
+                <div class="feature-item">
+                  <i class="fas fa-graduation-cap"></i>
+                  <span>Excellence in Education</span>
+                </div>
+                <div class="feature-item">
+                  <i class="fas fa-book-reader"></i>
+                  <span>Digital Learning Platform</span>
+                </div>
+                <div class="feature-item">
+                  <i class="fas fa-users"></i>
+                  <span>Collaborative Learning</span>
+                </div>
+              </div>
+              <div class="back-university-info">
+                <p>Established 1991 • Calapan City, Oriental Mindoro</p>
+              </div>
+              
+              <!-- Back Button -->
+              <button class="back-button" id="backButton">
+                <i class="fas fa-times"></i>
+                <span>Close Portal</span>
+              </button>
+            </div>
           </div>
         </div>
 
@@ -61,16 +100,10 @@
         <div class="book-pages" id="bookPages">
           <div class="book-spine"></div>
           
-          <!-- Back Button -->
-          <button class="back-button" id="backButton">
-            <i class="fas fa-arrow-left"></i>
-            <span>Back to Cover</span>
-          </button>
           
           <!-- Left Page - Welcome -->
           <div class="left-page slide-in-left">
             <div class="page-header">
-              <div class="page-number">Page 1</div>
             </div>
             <div class="welcome-content">
               <h2>Welcome to Your Academic Journey</h2>
@@ -92,7 +125,6 @@
           <!-- Right Page - Login Form -->
           <div class="right-page slide-in-right">
             <div class="page-header">
-              <div class="page-number">Page 2</div>
             </div>
             
             <div class="login-form-header">
